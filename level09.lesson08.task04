@@ -19,9 +19,9 @@ public class Solution {
     public static void processExceptions(Solution obj) {
         try                                                           //
         {                                                             //
-            obj.method1();                                            //
-            obj.method2();                                            //
-            obj.method3();                                            //
+            obj.method1();                                            
+            obj.method2();                                            
+            obj.method3();                                            
         }                                                             //
         catch (NoSuchFieldException e)                                //
         {                                                             //
