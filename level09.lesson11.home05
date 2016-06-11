@@ -22,26 +22,26 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s = reader.readLine();
-        ArrayList<Character> vowelsArray       = new ArrayList<>();
-        ArrayList<Character> consonantArray    = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));           //
+        String s = reader.readLine();                                                           //
+        ArrayList<Character> vowelsArray       = new ArrayList<>();                             //
+        ArrayList<Character> consonantArray    = new ArrayList<>();                             //
 
-        for (int i = 0; i < s.length(); i++) {
-            if (isVowel(s.charAt(i))) {
-                vowelsArray.add(s.charAt(i));
-            } else {
-                consonantArray.add(s.charAt(i));
-            }
-        }
-        for(Character x : vowelsArray) {
-            System.out.print(x + " ");
-        }
-        System.out.println("");
+        for (int i = 0; i < s.length(); i++) {                                                  //
+            if (isVowel(s.charAt(i))) {                                                         //
+                vowelsArray.add(s.charAt(i));                                                   //
+            } else {                                                                            //
+                consonantArray.add(s.charAt(i));                                                //
+            }                                                                                   //
+        }                                                                                       //
+        for(Character x : vowelsArray) {                                                        //
+            System.out.print(x + " ");                                                          //
+        }                                                                                       //
+        System.out.println("");                                                                 //
 
-        for(Character y : consonantArray) {
-            if (y.equals(" ")) continue;
-            System.out.print(y + " ");
+        for(Character y : consonantArray) {                                                     //
+            if (y.equals(' ')) continue;                                                        //
+            System.out.print(y + " ");                                                          //
         }
     }
 
