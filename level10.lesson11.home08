@@ -1,0 +1,68 @@
+package com.javarush.test.level10.lesson11.home08;
+
+import java.util.ArrayList;
+
+/* Массив списков строк
+Создать массив, элементами которого будут списки строк. Заполнить массив любыми данными и вывести их на экран.
+*/
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        ArrayList<String>[] arrayOfStringList =  createList();
+        printList(arrayOfStringList);
+    }
+
+    public static ArrayList<String>[] createList()
+    {
+        //массив Array-ев собственной персоной                                //
+        ArrayList<String>[] list = new ArrayList[5];                          //
+
+        //эти Array-и будут добавлены в массив Array-ев (см. выше)            //
+        ArrayList<String> preList1 = new ArrayList<>();                       //
+        ArrayList<String> preList2 = new ArrayList<>();                       //
+        ArrayList<String> preList3 = new ArrayList<>();                       //
+        ArrayList<String> preList4 = new ArrayList<>();                       //
+        ArrayList<String> preList5 = new ArrayList<>();                       //
+
+        preList1.add("Мама мыла раму");                                       //
+        preList1.add("Рама мылась мамой");                                    //
+        preList1.add("Расма стала чистой");                                   //
+
+        preList2.add("Коля топал в школу");                                   //
+        preList2.add("Школа ждала Колю");                                     //
+        preList2.add("Коля теперь в школе");                                  //
+
+        preList3.add("Маша играля с мячиком");                                //
+        preList3.add("Мячик упал в речку");                                   //
+        preList3.add("Мячик не утонул, но один хрен его унесло");             //
+
+        preList4.add("Корабли лавировали лавировали");                        //
+        preList4.add("Корабли не вылавировали");                              //
+        preList4.add("Вывод: капитанов в матросы!");                          //
+
+        preList5.add("Пилотируемый полёт на Марс - это амбициозно");          //
+        preList5.add("Колонизация Солнечной системы - это будущее");          //
+        preList5.add("Короче Илон Маск - красавчик!");                        //
+
+        list[0] = preList1;                                                   //
+        list[1] = preList2;                                                   //
+        list[2] = preList3;                                                   //
+        list[3] = preList4;                                                   //
+        list[4] = preList5;                                                   //
+
+        return list;                                                          //
+    }
+
+    public static void printList(ArrayList<String>[] arrayOfStringList)
+    {
+        for (ArrayList<String> list: arrayOfStringList)
+        {
+            for (String s : list)
+            {
+                System.out.println(s);
+            }
+        }
+    }
+}
