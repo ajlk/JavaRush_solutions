@@ -1,0 +1,104 @@
+package com.javarush.test.level10.lesson11.home06;
+
+/* Конструкторы класса Human
+Напиши класс Human с 6 полями. Придумай и реализуй 10 различных конструкторов для него. Каждый конструктор должен иметь смысл.
+*/
+
+public class Solution
+{
+    public static void main(String[] args)
+    {
+
+    }
+
+    public static class Human
+    {
+        private String name;                                                    //и до самого низа
+        private String sex;
+        private String modelOfCar;
+        private int age;
+        private int height;
+        private int weight;
+
+        //01
+        public Human (int age, int height, int weight)
+        {
+            this.age    = age;
+            this.height = height;
+            this.weight = weight;
+        }
+
+        //02
+        public Human (String name, String sex, int weight)
+        {
+            this.name   = name;
+            this.sex    = sex;
+            this.weight = weight;
+        }
+
+        //03
+        public Human (String name, int age)
+        {
+            this.name   = name;
+            this.age    = age;
+        }
+
+        //04
+        public Human (String name, String sex, int height, int weight)
+        {
+            this.name   = name;
+            this.sex    = sex;
+            this.height = height;
+            this.weight = weight;
+        }
+
+        //05
+        public Human (String name)
+        {
+            this.name = name;
+        }
+
+        //06
+        public Human (String name, int age, int height)
+        {
+            this.name   = name;
+            this.age    = age;
+            this.height = height;
+        }
+
+        //07
+        public Human (String name, String sex)
+        {
+            this.name   = name;
+            this.sex    = sex;
+        }
+
+        //08
+        public Human (String name, String sex, String modelOfCar)
+        {
+            this.name       = name;
+            this.sex        = sex;
+            this.modelOfCar = modelOfCar;
+        }
+
+        //09
+        public Human (String name, String sex, String modelOfCar, int age)
+        {
+            this.name       = name;
+            this.sex        = sex;
+            this.modelOfCar = modelOfCar;
+            this.age        = age;
+        }
+
+        //10
+        public Human (String name, String sex, String modelOfCar, int age, int height, int weight)
+        {
+            this.name       = name;
+            this.sex        = sex;
+            this.modelOfCar = modelOfCar;
+            this.age        = age;
+            this.height     = height;
+            this.weight     = weight;
+        }
+    }
+}
