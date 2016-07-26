@@ -1,0 +1,37 @@
+package com.javarush.test.level13.lesson11.home04;
+
+/* Запись в файл
+1. Прочесть с консоли имя файла.
+2. Считывать строки с консоли, пока пользователь не введет строку "exit".
+3. Вывести абсолютно все введенные строки в файл, каждую строчку с новой стороки.
+*/
+
+import java.io.BufferedReader;                                                            //
+import java.io.InputStreamReader;                                                         //
+import java.io.FileWriter;                                                                //
+import java.io.IOException;                                                               //
+import java.util.ArrayList;                                                               //
+
+public class Solution
+{
+    public static void main(String[] args) throws IOException                             //
+    {
+        BufferedReader reader = new BufferedReader (new InputStreamReader(System.in));    //
+        FileWriter file = new FileWriter(reader.readLine());                              //
+
+        ArrayList<String> list = new ArrayList<>();                                       //
+
+        while (true) {                                                                    //
+            String word = reader.readLine();                                              //
+            if (word.equals("exit")) {                                                    //
+                for (String s : list) {                                                   //
+                    file.write(s);                                                        //
+                }                                                                         //
+                file.write("exit");                                                       //
+                break;                                                                    //
+            }                                                                             //
+            list.add(word + "\n");                                                        //
+        }                                                                                 //
+        file.close();                                                                     //
+    }
+}
